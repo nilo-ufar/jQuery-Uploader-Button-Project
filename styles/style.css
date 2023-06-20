@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Vazir-Medium;
+    src: url(../fonts/Vazir-Medium.eot) format("eot"), url(../fonts/Vazir-Medium.woff) format("woff"), url(../fonts/Vazir-Medium.woff2) format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+*,
+body {
+    font-family: Vazir-Medium;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.course-title {
+    font-weight: bold;
+    font-size: 34px;
+    color: #000;
+    text-align: center;
+    margin-top: 100px;
+}
+
+body {
+    background-color: #d8e0e5;
+    font-size: 24px;
+    min-height: 100%;
+}
+
+.circle-loader {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left-color: #00ff8c;
+    border-radius: 50%;
+    margin: 150px 100px;
+    animation: loader-spin 1.2s infinite linear;
+}
+
+@keyframes loader-spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.checkmark {
+    display: none;
+}
+
+.checkmark::after {
+    opacity: 1;
+    height: 120px;
+    width: 50px;
+    transform-origin: left top;
+    border-right: 3px solid #5cb85c;
+    border-top: 3px solid #5cb85c;
+    content: "";
+    top: 130px;
+    left: 76px;
+    position: absolute;
+    transform: rotate(220deg) scaleX(-1);
+    animation: checkmark 800ms ease;
+}
+
+@keyframes checkmark {
+    0% {
+        opacity: 1;
+        height: 0;
+        width: 0;
+    }
+    20% {
+        opacity: 1;
+        height: 0;
+        width: 50px;
+    }
+    40% {
+        opacity: 1;
+        height: 120px;
+        width: 50px;
+    }
+    100% {
+        opacity: 1;
+        height: 120px;
+        width: 50px;
+    }
+}
+
+.load-complete {
+    animation: none;
+    border-color: #5cb85c;
+    transition: border-color 500ms ease-out;
+}
+
+.btn {
+    padding: 10px 48px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2ed573;
+    color: #fff;
+    outline: none;
+}
